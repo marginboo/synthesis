@@ -1,22 +1,34 @@
 ﻿module Synthesis
 
-let abelar _ =
+let abelar b = b > 12 && b < 3097 && b % 12=0
+    //failwith "Not implemented"
+
+let area (a :float) (b :float) = 
+    //match (a | b ) < 0 with
+    //| true -> MatchFailureException
+    //| false -> 0.5 * (a * b)
     failwith "Not implemented"
 
-let area _ _ =
-    failwith "Not implemented"
+let zollo a = 
+    match a > 0 with
+    | true -> a* 2
+    | false -> a * -1
+    //failwith "Not implemented"
 
-let zollo _ =
-    failwith "Not implemented"
+let min a b =
+    match a > b with
+    | true -> b
+    | false -> a
+    //failwith "Not implemented"
 
-let min _ _ =
-    failwith "Not implemented"
+let max a b =
+    match a > b with
+    | true -> a 
+    | false -> b
+    //failwith "Not implemented"
 
-let max _ _ =
-    failwith "Not implemented"
-
-let ofTime _ _ _ =
-    failwith "Not implemented"
+let ofTime _ _ _ = fun a -> fun b -> fun c -> (a*3600) + (b*60) + c
+    //failwith "Not implemented"
 
 let toTime _ =
     failwith "Not implemented"

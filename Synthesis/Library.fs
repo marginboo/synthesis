@@ -30,10 +30,13 @@ let max a b =
 let ofTime a b c = (*fun a -> fun b -> fun c ->*) (a*3600) + (b*60) + c
     //failwith "Not implemented"
 
-let toTime _ =
-    failwith "Not implemented"
+let toTime time =
+    match time < 0 with 
+    |true -> (0,0,0)
+    |false -> ( time / 60 ) / 60, ( time / 60 ) % 60 , time % 60
+    //failwith "Not implemented"
 
-let digits _ =
+let digits year =
     failwith "Not implemented"
 
 let minmax _ =
@@ -45,8 +48,15 @@ let isLeap _ =
 let month _ =
     failwith "Not implemented"
 
-let toBinary _ =
-    failwith "Not implemented"
+let toBinary nan =
+    let rec conv num word = 
+        match num with
+        | 1 | 0 -> string num + word
+        |_ -> conv (num / 2) ( string(num % 2 ) + word )
+    match nan < 0 with 
+    |true -> failwith "stop it please"
+    |false -> conv nan ""
+    //failwith "Not implemented"
 
 let bizFuzz _ =
     failwith "Not implemented"

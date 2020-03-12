@@ -4,10 +4,10 @@ let abelar b = b > 12 && b < 3097 && b % 12=0
     //failwith "Not implemented"
 
 let area (a :float) (b :float) = 
-    //match (a | b ) < 0 with
-    //| true -> MatchFailureException
-    //| false -> 0.5 * (a * b)
-    failwith "Not implemented"
+    match (a < 0.0 ) || (b  < 0.0) with
+    | true -> failwith "You Suck"
+    | false -> 0.5 * (a * b)
+    //failwith "Not implemented"
 
 let zollo a = 
     match a > 0 with
@@ -27,7 +27,7 @@ let max a b =
     | false -> b
     //failwith "Not implemented"
 
-let ofTime _ _ _ = fun a -> fun b -> fun c -> (a*3600) + (b*60) + c
+let ofTime a b c = (*fun a -> fun b -> fun c ->*) (a*3600) + (b*60) + c
     //failwith "Not implemented"
 
 let toTime _ =

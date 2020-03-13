@@ -42,8 +42,10 @@ let digits year =
 let minmax _ =
     failwith "Not implemented"
 
-let isLeap _ =
-    failwith "Not implemented"
+let isLeap year =
+    match  year < 1582 && ((year % 4) = 0 ) && (year % 200 =0 ) with
+    | true
+    //failwith "Not implemented"
 
 let month _ =
     failwith "Not implemented"
